@@ -149,6 +149,42 @@ test_f1_score = f1_score(labels, predictions)
 print(f"\nTest accuracy: {test_accuracy:.3f}\nTest F1-score: {test_f1_score:.3f}")
 ```
 
-11. **Model Performance Visualization**  
-12. **Output Prediction and Probability Estimation on Test Data**  
+11. **Model Performance Visualization**
+
+```python
+plt.figure(figsize=(12, 5))
+plt.subplot(1, 2, 1)
+plt.plot(history.history['accuracy'], label='Train Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.title('Model Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.grid(True, linestyle='--', linewidth=0.5)
+save_plot("accuracy_plot.png")
+
+plt.subplot(1, 2, 2)
+plt.plot(history.history['loss'], label='Train Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.title('Model Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.grid(True, linestyle='--', linewidth=0.5)
+save_plot("loss_plot.png")
+
+# Matriz de confusión
+cm = confusion_matrix(labels, predictions)
+plt.figure(figsize=(6, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+save_plot("confusion_matrix.png")
+
+# Reporte de clasificación
+print(classification_report(labels, predictions, target_names=class_names))
+```
+![Confusion Matrix](plots/confusion_matrix.png)
+![Report](plots/classification_report.png)
 
