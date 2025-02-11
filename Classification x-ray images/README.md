@@ -58,18 +58,19 @@ def save_plot(filename):
 def preprocess_input_with_norm(image):
     return tf.image.per_image_standardization(image)
 
-# Data augmentation and data loading
+#data loading
 train_datagen = ImageDataGenerator(preprocessing_function=preprocess_input_with_norm)
 test_datagen = ImageDataGenerator(preprocessing_function=preprocess_input_with_norm)
 
 train_data = train_datagen.flow_from_directory(f"{data_path}/train", target_size=(224, 224), batch_size=32, class_mode='binary')
 test_data = test_datagen.flow_from_directory(f"{data_path}/test", target_size=(224, 224), batch_size=32, class_mode='binary', shuffle=False)
 
-
+```
 
 3. **Data Visualization**
 In this step, we visualize the distribution of the dataset to understand the class balance in the training data.
 
+```python
 # Visualize data distribution
 class_names = list(train_data.class_indices.keys())
 class_counts = [len(os.listdir(os.path.join(f"{data_path}/train", cls))) for cls in class_names]
@@ -87,14 +88,13 @@ save_plot("data_distribution.png")
 
 4. **Data Preprocessing and Augmentation**
 
-In this step, we perform the necessary data processing and normalization to prepare the dataset for training.
+In this step, we preprocess the data and apply data augmentation techniques. Given the imbalance in the dataset, where the "normal" category has fewer images compared to the "pneumonia" category, it is necessary to increase the number of images in the "normal" category. This is addressed by generating new images from the existing ones using augmentation techniques.
 
-```python
-# hola
 
-5. **Building the Models**  
-6. **Compiling and Training the Models**  
-7. **Model Evaluation on Validation Data**  
-8. **Model Performance Visualization**  
-9. **Output Prediction and Probability Estimation on Test Data**  
+5. **Building the Models**
+  
+7. **Compiling and Training the Models**  
+8. **Model Evaluation on Validation Data**  
+9. **Model Performance Visualization**  
+10. **Output Prediction and Probability Estimation on Test Data**  
 
