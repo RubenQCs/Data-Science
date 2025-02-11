@@ -80,6 +80,10 @@ plt.ylabel('Number of Images')
 plt.title('Number of Images per Class in the Training Set')
 plt.xticks(rotation=45)
 save_plot("data_distribution.png")
+![Data Distribution Plot](plots/data_distribution.png)
+
+
+
 4. **Data Preprocessing and Augmentation**  
 5. **Building the Models**  
 6. **Compiling and Training the Models**  
