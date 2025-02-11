@@ -134,8 +134,11 @@ model = Model(inputs=base_model.input, outputs=out)
 model.compile(optimizer=tf.keras.optimizers.AdamW(learning_rate=0.001, weight_decay=0.01), loss='binary_crossentropy', metrics=['accuracy'])
 ```
   
-7. **Compiling and Training the Models**  
-8. **Model Evaluation on Validation Data**  
-9. **Model Performance Visualization**  
-10. **Output Prediction and Probability Estimation on Test Data**  
+7. **Training the Models**
+```python
+  history = model.fit(train_data, epochs=10, validation_data=test_data, shuffle=True)
+```
+9. **Model Evaluation on Validation Data**  
+10. **Model Performance Visualization**  
+11. **Output Prediction and Probability Estimation on Test Data**  
 
