@@ -6,7 +6,7 @@
 
 ## 📌 General Workflow  
 
-1. **Importing Required Packages and Modules**  
+1. **Importing Required Packages and Modules**
    The following packages were used for various stages of the project:
    ```python
    import os
@@ -25,10 +25,8 @@
    from tensorflow.keras.models import Model
    from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
 
-2. **Data Loading**
+3. **Data Loading**
 To load and preprocess the data, the following steps were performed:
-![Data Distribution Plot](plots/data_distribution.png)
-
 ```python
 # Configure paths
 data_path = "data/xrays"
@@ -68,6 +66,7 @@ train_data = train_datagen.flow_from_directory(f"{data_path}/train", target_size
 test_data = test_datagen.flow_from_directory(f"{data_path}/test", target_size=(224, 224), batch_size=32, class_mode='binary', shuffle=False)
 
 
+
 3. **Data Visualization**
 In this step, we visualize the distribution of the dataset to understand the class balance in the training data.
 
@@ -82,8 +81,8 @@ plt.ylabel('Number of Images')
 plt.title('Number of Images per Class in the Training Set')
 plt.xticks(rotation=45)
 save_plot("data_distribution.png")
-
-
+```
+![Data Distribution Plot](plots/data_distribution.png)
 
 
 4. **Data Preprocessing and Augmentation**
