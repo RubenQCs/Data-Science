@@ -138,7 +138,17 @@ model.compile(optimizer=tf.keras.optimizers.AdamW(learning_rate=0.001, weight_de
 ```python
   history = model.fit(train_data, epochs=10, validation_data=test_data, shuffle=True)
 ```
-9. **Model Evaluation on Validation Data**  
-10. **Model Performance Visualization**  
-11. **Output Prediction and Probability Estimation on Test Data**  
+9. **Model Evaluation**
+```python
+predictions = model.predict(test_data)
+predictions = np.round(predictions).flatten()
+labels = test_data.classes
+
+test_accuracy = accuracy_score(labels, predictions)
+test_f1_score = f1_score(labels, predictions)
+print(f"\nTest accuracy: {test_accuracy:.3f}\nTest F1-score: {test_f1_score:.3f}")
+```
+
+11. **Model Performance Visualization**  
+12. **Output Prediction and Probability Estimation on Test Data**  
 
