@@ -7,6 +7,23 @@
 ## 📌 General Workflow  
 
 1. **Importing Required Packages and Modules**  
+   The following packages were used for various stages of the project:
+   ```python
+   import os
+   import shutil
+   import zipfile
+   import random
+   import glob
+   import cv2
+   import numpy as np
+   import tensorflow as tf
+   import matplotlib.pyplot as plt
+   import seaborn as sns
+   from tensorflow.keras.preprocessing.image import ImageDataGenerator
+   from tensorflow.keras.applications import ResNet50
+   from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout
+   from tensorflow.keras.models import Model
+   from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
 2. **Data Loading**  
 3. **Data Visualization**  
 4. **Data Preprocessing and Augmentation**  
