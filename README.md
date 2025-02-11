@@ -1,6 +1,6 @@
 # 🧑‍🔬 Data Science  
 
-Welcome to my Data Science repository. In this repository, I will be uploading various projects that showcase my skills in data analysis, machine learning, and artificial intelligence.  
+Welcome to my Data Science repository! I am a Ph.D. in Physics, passionate about innovation and technological solutions. In this repository, I will be uploading various projects that showcase my skills in data analysis, machine learning, and artificial intelligence.  
 
 ## 📌 What will you find in this repository?  
 - 🔹 **Exploratory Data Analysis (EDA)**: Data processing, cleaning, and visualization.  
