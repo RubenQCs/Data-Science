@@ -24,6 +24,7 @@
    from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout
    from tensorflow.keras.models import Model
    from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
+
 2. **Data Loading**
 To load and preprocess the data, the following steps were performed:
 ![Data Distribution Plot](plots/data_distribution.png)
@@ -85,11 +86,16 @@ save_plot("data_distribution.png")
 
 
 
-4. **Data Preprocessing and Augmentation**  
+4. **Data Preprocessing and Augmentation**
+
+In this step, we perform the necessary data processing and normalization to prepare the dataset for training.
+
+```python
+# hola
+
 5. **Building the Models**  
 6. **Compiling and Training the Models**  
 7. **Model Evaluation on Validation Data**  
 8. **Model Performance Visualization**  
 9. **Output Prediction and Probability Estimation on Test Data**  
 
-This structured workflow ensures a comprehensive approach to developing, training, and evaluating machine learning models efficiently. 🚀  
