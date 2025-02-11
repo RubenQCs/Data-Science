@@ -108,12 +108,32 @@ for i in range(num_to_generate):
     cv2.imwrite(new_filename, (augmented_img * 255).astype(np.uint8))
 print(f"Aumento de datos completado: {num_to_generate} imágenes nuevas generadas.")
 
-# Recargar datos después de la aumentación
+# Load Data
 train_data = train_datagen.flow_from_directory(f"{data_path}/train", target_size=(224, 224), batch_size=32, class_mode='binary')
 
 test_data = test_datagen.flow_from_directory(f"{data_path}/test", target_size=(224, 224), batch_size=32, class_mode='binary', shuffle=False)
 ```
 5. **Building the Models**
+In this step, we build the deep learning model using *ResNet50** model. We add extra layers on top of the base model, including **Dropout** to reduce overfitting.  Given that this is a binary classification problem, we use a **sigmoid** activation function at the output layer
+
+   ```
+base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+for layer in base_model.layers:
+    layer.trainable = False
+
+x = base_model.output
+x = GlobalAveragePooling2D()(x)
+x = Dense(256, activation='relu')(x)
+x = Dropout(0.5)(x)
+x = Dense(128, activation='relu')(x)
+x = Dropout(0.3)(x)
+x = Dense(64, activation='relu')(x)
+out = Dense(1, activation='sigmoid')(x)
+
+model = Model(inputs=base_model.input, outputs=out)
+model.compile(optimizer=tf.keras.optimizers.AdamW(learning_rate=0.001, weight_decay=0.01), loss='binary_crossentropy', metrics=['accuracy'])
+
+   ```
   
 7. **Compiling and Training the Models**  
 8. **Model Evaluation on Validation Data**  
