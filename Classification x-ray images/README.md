@@ -1,8 +1,8 @@
 # 🧑‍🔬 Machine Learning & Deep Learning Project  
 
-This project was developed using **TensorFlow** and **PyTorch** to implement and compare different machine learning and deep learning models. In this repository, we will specifically describe the code implemented using **TensorFlow**. The general steps followed in this project are outlined below.  
+  This project was developed using **TensorFlow** and **PyTorch** to implement and compare different machine learning and deep learning models. In this repository, we will specifically describe the code implemented using **TensorFlow**. The general steps followed in this project are outlined below.  
 
-The general steps followed in this project are outlined below.  
+  The general steps followed in this project are outlined below.  
 
 ## 📌 General Workflow  
 
