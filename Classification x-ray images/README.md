@@ -64,12 +64,27 @@ test_datagen = ImageDataGenerator(preprocessing_function=preprocess_input_with_n
 
 train_data = train_datagen.flow_from_directory(f"{data_path}/train", target_size=(224, 224), batch_size=32, class_mode='binary')
 test_data = test_datagen.flow_from_directory(f"{data_path}/test", target_size=(224, 224), batch_size=32, class_mode='binary', shuffle=False)
-4. **Data Visualization**  
-5. **Data Preprocessing and Augmentation**  
-6. **Building the Models**  
-7. **Compiling and Training the Models**  
-8. **Model Evaluation on Validation Data**  
-9. **Model Performance Visualization**  
-10. **Output Prediction and Probability Estimation on Test Data**  
+
+
+3. **Data Visualization**
+In this step, we visualize the distribution of the dataset to understand the class balance in the training data.
+
+# Visualize data distribution
+class_names = list(train_data.class_indices.keys())
+class_counts = [len(os.listdir(os.path.join(f"{data_path}/train", cls))) for cls in class_names]
+
+plt.figure(figsize=(8, 5))
+plt.bar(class_names, class_counts, color='skyblue')
+plt.xlabel('Classes')
+plt.ylabel('Number of Images')
+plt.title('Number of Images per Class in the Training Set')
+plt.xticks(rotation=45)
+save_plot("data_distribution.png")
+4. **Data Preprocessing and Augmentation**  
+5. **Building the Models**  
+6. **Compiling and Training the Models**  
+7. **Model Evaluation on Validation Data**  
+8. **Model Performance Visualization**  
+9. **Output Prediction and Probability Estimation on Test Data**  
 
 This structured workflow ensures a comprehensive approach to developing, training, and evaluating machine learning models efficiently. 🚀  
