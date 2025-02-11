@@ -116,7 +116,7 @@ test_data = test_datagen.flow_from_directory(f"{data_path}/test", target_size=(2
 5. **Building the Models**
 In this step, we build the deep learning model using *ResNet50** model. We add extra layers on top of the base model, including **Dropout** to reduce overfitting.  Given that this is a binary classification problem, we use a **sigmoid** activation function at the output layer
 
-   ```
+```python
 base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 for layer in base_model.layers:
     layer.trainable = False
@@ -132,8 +132,7 @@ out = Dense(1, activation='sigmoid')(x)
 
 model = Model(inputs=base_model.input, outputs=out)
 model.compile(optimizer=tf.keras.optimizers.AdamW(learning_rate=0.001, weight_decay=0.01), loss='binary_crossentropy', metrics=['accuracy'])
-
-   ```
+```
   
 7. **Compiling and Training the Models**  
 8. **Model Evaluation on Validation Data**  
