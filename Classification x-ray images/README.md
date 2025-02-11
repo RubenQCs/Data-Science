@@ -90,7 +90,29 @@ save_plot("data_distribution.png")
 
 In this step, we preprocess the data and apply data augmentation techniques. Given the imbalance in the dataset, where the "normal" category has fewer images compared to the "pneumonia" category, it is necessary to increase the number of images in the "normal" category. This is addressed by generating new images from the existing ones using augmentation techniques.
 
+```
+num_to_generate = abs(class_counts[0] - class_counts[1])
+normal_path = f"{data_path}/train/NORMAL"
+os.makedirs(normal_path, exist_ok=True)
 
+normal_datagen = ImageDataGenerator(rescale=1./255, rotation_range=15, zoom_range=0.2, width_shift_range=0.1, height_shift_range=0.1, horizontal_flip=True)
+image_files = glob.glob(os.path.join(normal_path, "*.jpeg"))
+
+for i in range(num_to_generate):
+    img_path = random.choice(image_files)
+    img = cv2.imread(img_path)
+    img = cv2.resize(img, (224, 224))
+    img = np.expand_dims(img, axis=0)
+    augmented_img = next(normal_datagen.flow(img, batch_size=1))[0]
+    new_filename = os.path.join(normal_path, f"augmented_{i}.jpeg")
+    cv2.imwrite(new_filename, (augmented_img * 255).astype(np.uint8))
+print(f"Aumento de datos completado: {num_to_generate} imágenes nuevas generadas.")
+
+# Recargar datos después de la aumentación
+train_data = train_datagen.flow_from_directory(f"{data_path}/train", target_size=(224, 224), batch_size=32, class_mode='binary')
+
+test_data = test_datagen.flow_from_directory(f"{data_path}/test", target_size=(224, 224), batch_size=32, class_mode='binary', shuffle=False)
+```
 5. **Building the Models**
   
 7. **Compiling and Training the Models**  
