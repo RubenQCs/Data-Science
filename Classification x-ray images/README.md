@@ -26,6 +26,7 @@
    from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
 2. **Data Loading**
 To load and preprocess the data, the following steps were performed:
+![Data Distribution Plot](plots/data_distribution.png)
 
 ```python
 # Configure paths
@@ -80,7 +81,7 @@ plt.ylabel('Number of Images')
 plt.title('Number of Images per Class in the Training Set')
 plt.xticks(rotation=45)
 save_plot("data_distribution.png")
-![Data Distribution Plot](plots/data_distribution.png)
+
 
 
 
