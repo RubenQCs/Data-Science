@@ -134,11 +134,11 @@ model = Model(inputs=base_model.input, outputs=out)
 model.compile(optimizer=tf.keras.optimizers.AdamW(learning_rate=0.001, weight_decay=0.01), loss='binary_crossentropy', metrics=['accuracy'])
 ```
   
-7. **Training the Models**
+6. **Training the Models**
 ```python
   history = model.fit(train_data, epochs=10, validation_data=test_data, shuffle=True)
 ```
-9. **Model Evaluation**
+7. **Model Evaluation**
 ```python
 predictions = model.predict(test_data)
 predictions = np.round(predictions).flatten()
@@ -149,7 +149,7 @@ test_f1_score = f1_score(labels, predictions)
 print(f"\nTest accuracy: {test_accuracy:.3f}\nTest F1-score: {test_f1_score:.3f}")
 ```
 
-11. **Model Performance Visualization**
+8. **Model Performance Visualization**
 
 ```python
 plt.figure(figsize=(12, 5))
