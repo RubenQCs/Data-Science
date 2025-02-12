@@ -93,8 +93,9 @@ cap.release()
 cv2.destroyAllWindows()
 
 ```
+
 ## 🎥 Ejemplo de Detección y Tracking  
 
-📌 Puedes descargar y ver el video aquí:  
-
-[![Tracked Video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](output/tracked_video.mp4
+📌 **Ver el video en Google Drive:**  
+[![Tracked Video](https://img.icons8.com/color/48/000000/google-drive--v1.png)]([https://drive.google.com/uc?id=1AbCDeFGH123456789](https://drive.google.com/file/d/1NXBTsCLbZFCL07NkiOg5n1tSnz1lcPG2/view?usp=share_link
+))
