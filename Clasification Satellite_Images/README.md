@@ -25,4 +25,26 @@ This project implements a **satellite image classification model** using **PyTor
 - **PyTorch** for deep learning model development.  
 - **Torchvision** for image transformations.  
 - **OpenCV and Matplotlib** for data visualization.  
-- **Scikit-learn** for performance analysis. 
+- **Scikit-learn** for performance analysis.
+
+## 📌 General Workflow  
+1. **Importing Required Packages and Modules**
+   The following packages were used for various stages of the project:
+      ```python
+      import os
+import random
+import shutil
+import zipfile
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import seaborn as sns
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from torchvision import datasets, transforms, models
+from torch.utils.data import DataLoader, random_split
+from torchmetrics.classification import Accuracy, F1Score
+from sklearn.metrics import confusion_matrix, classification_report
+
+```
