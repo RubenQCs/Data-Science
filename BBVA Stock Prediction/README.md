@@ -1,5 +1,6 @@
-# 📈 BBVA Stock Price Prediction with Machine Learning
+# 📈 BBVA Stock Price Prediction with Machine Learning (...IN PROGRESS...)
 **Note:** This project is currently a **work in progress**.
+
 This repository contains a project aimed at **predicting the stock price of BBVA** using **Machine Learning** techniques. The goal is to analyze historical BBVA data and build models to estimate its future price movements.
 
 ## 🔍 **What’s in this repository?**  
