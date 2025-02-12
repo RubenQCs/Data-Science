@@ -4,19 +4,19 @@ This project implements a **satellite image classification model** using **PyTor
 
 ## 📌 Project Features  
 
-✅ **Data Processing:**  
+**Data Processing:**  
 - Automatic extraction and organization of the dataset.  
 - Creation of training, validation, and test subsets.  
 
-✅ **Training with Transfer Learning:**  
+**Training with Transfer Learning:**  
 - **ResNet-18** pretrained on ImageNet.  
 - Freezing early layers and fine-tuning the final layer.  
 
-✅ **Model Evaluation:**  
+**Model Evaluation:**  
 - Calculation of metrics such as **accuracy** and **F1-score**.  
 - Visualization of the **confusion matrix**.  
 
-✅ **Results Visualization:**  
+ **Results Visualization:**  
 - **Loss and accuracy** plots over epochs.  
 - Analysis of the **class distribution** in the dataset.  
 
