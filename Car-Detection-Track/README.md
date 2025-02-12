@@ -12,7 +12,7 @@ The goal of this project is to develop an efficient solution for traffic analysi
 This system can be applied in various scenarios, such as **traffic monitoring, toll management, vehicle flow analysis, and smart cities**.  
 
 ## Technologies Used  
-- **YOLOv11** for real-time detection.  
+- **YOLOv8** for real-time detection.  
 - **DeepSORT** for vehicle tracking.  
 - **OpenCV** for video processing.  
 - **Python** as the main programming language.  
@@ -25,7 +25,7 @@ from ultralytics import YOLO
 from deep_sort_realtime.deepsort_tracker import DeepSort
 
 # Configuración del modelo YOLO
-MODEL_PATH = "yolo11n.pt"
+MODEL_PATH = "yolo8n.pt"
 CONFIDENCE_THRESHOLD = 0.7
 CLASS_NAME = "car"
 VIDEO_PATH = "example/Car6.mp4"
