@@ -233,7 +233,7 @@ plt.show()
 # Reporte de clasificación
 print(classification_report(all_labels.numpy(), all_preds.numpy(), target_names=dataset.classes))
 
-``
+```
 ![Confusion Matrix](Report/confusion_matrix.jpg)
 ![Report](Report/Report.png)
 
