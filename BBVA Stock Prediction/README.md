@@ -28,8 +28,8 @@ This project aims to demonstrate how Machine Learning techniques can be applied 
 ## 📌 General Workflow  
 
 1. **Importing Required Packages and Modules**
-   ```Python
 
+```Python
 import yfinance as yf
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
