@@ -97,4 +97,4 @@ cv2.destroyAllWindows()
 ## 🎥 Ejemplo de Detección y Tracking  
 
 📌 **Ver el video en Google Drive:**  
-[![Tracked Video](https://img.icons8.com/color/48/000000/google-drive--v1.png)](https://drive.google.com/uc?id=1NXBTsCLbZFCL07NkiOg5n1tSnz1lcPG2)
+[📹 Ver Video en Google Drive](https://drive.google.com/open?id=1NXBTsCLbZFCL07NkiOg5n1tSnz1lcPG2)
