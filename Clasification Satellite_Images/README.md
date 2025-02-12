@@ -1,28 +1,28 @@
-# 🛰️ Clasificación de Imágenes Satelitales con PyTorch  
+# 🛰️ Satellite Image Classification with PyTorch  
 
-Este proyecto implementa un modelo de **clasificación de imágenes satelitales** utilizando **PyTorch** y redes neuronales convolucionales (**CNNs**). Se emplea **ResNet-18** como modelo base para la extracción de características y entrenamiento supervisado.  
+This project implements a **satellite image classification model** using **PyTorch** and **Convolutional Neural Networks (CNNs)**. We use **ResNet-18** as the base model for feature extraction and supervised training.  
 
-## 📌 Características del Proyecto  
+## 📌 Project Features  
 
-✅ **Procesamiento de Datos:**  
-- Descompresión y organización automática del conjunto de datos.  
-- Creación de subconjuntos para entrenamiento, validación y prueba.  
+✅ **Data Processing:**  
+- Automatic extraction and organization of the dataset.  
+- Creation of training, validation, and test subsets.  
 
-✅ **Entrenamiento con Transfer Learning:**  
-- Uso de **ResNet-18** preentrenada en ImageNet.  
-- Congelación de capas iniciales y ajuste fino de la capa final.  
+✅ **Training with Transfer Learning:**  
+- **ResNet-18** pretrained on ImageNet.  
+- Freezing early layers and fine-tuning the final layer.  
 
-✅ **Evaluación del Modelo:**  
-- Cálculo de métricas como **accuracy** y **F1-score**.  
-- Visualización de la matriz de confusión.  
+✅ **Model Evaluation:**  
+- Calculation of metrics such as **accuracy** and **F1-score**.  
+- Visualization of the **confusion matrix**.  
 
-✅ **Visualización de Resultados:**  
-- Gráficos de **pérdida y precisión** a lo largo de las épocas.  
-- Análisis de la distribución de clases en el conjunto de datos.  
+✅ **Results Visualization:**  
+- **Loss and accuracy** plots over epochs.  
+- Analysis of the **class distribution** in the dataset.  
 
-## 🔧 Tecnologías Utilizadas  
+## 🔧 Technologies Used  
 
-- **PyTorch** para el desarrollo del modelo.  
-- **Torchvision** para transformaciones de imágenes.  
-- **OpenCV y Matplotlib** para visualización de datos.  
-- **Scikit-learn** para el análisis de métricas.  
+- **PyTorch** for deep learning model development.  
+- **Torchvision** for image transformations.  
+- **OpenCV and Matplotlib** for data visualization.  
+- **Scikit-learn** for performance analysis. 
