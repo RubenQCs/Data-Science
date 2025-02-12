@@ -193,6 +193,7 @@ optimizer = optim.Adam(model.fc.parameters(), lr=0.01)
 train_model(model, train_loader, criterion, optimizer, epochs=10)
 
 ```
+![Metrics_plot](Report/metrics_plot.jpg)
 
 6. **Model Evaluation**
 ```Python
