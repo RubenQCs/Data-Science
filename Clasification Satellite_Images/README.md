@@ -30,8 +30,8 @@ This project implements a **satellite image classification model** using **PyTor
 ## 📌 General Workflow  
 1. **Importing Required Packages and Modules**
    The following packages were used for various stages of the project:
-      ```python
-      import os
+```python
+import os
 import random
 import shutil
 import zipfile
