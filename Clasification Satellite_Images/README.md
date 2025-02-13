@@ -10,7 +10,6 @@ This project implements a **satellite image classification model** using **PyTor
 
 **Training with Transfer Learning:**  
 - **ResNet-18** pretrained on ImageNet.  
-- Freezing early layers and fine-tuning the final layer.  
 
 **Model Evaluation:**  
 - Calculation of metrics such as **accuracy** and **F1-score**.  
