@@ -94,7 +94,9 @@ cv2.destroyAllWindows()
 
 ```
 
-## 🎥 Ejemplo de Detección y Tracking  
+## Example of Detection and Tracking
+
+Here you can watch a video with the results:  
 
 📌 **Ver el video en Google Drive:**  
 [📹 Ver Video en Google Drive](https://drive.google.com/open?id=1NXBTsCLbZFCL07NkiOg5n1tSnz1lcPG2)
