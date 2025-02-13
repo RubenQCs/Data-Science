@@ -17,8 +17,6 @@ This repository contains a project aimed at **predicting the stock price of BBVA
 - `matplotlib` and `seaborn` for visualization.  
 - `scikit-learn` and `TensorFlow/PyTorch` for Machine Learning models.  
 
-## 🚀 **Final goal**  
-This project aims to demonstrate how Machine Learning techniques can be applied to financial market analysis and assist in decision-making.
 
 ## 📌 General Workflow  
 
