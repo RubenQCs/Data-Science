@@ -21,8 +21,8 @@ This project demonstrates the feasibility of using computer vision models to aut
 
 ![Labels](plots/Labels.png)
 ![Results](plots/Fig1.png)
-![Results](plots/Fig2.png)
 ![Results](plots/Detection.png)
+![Results](plots/Fig2.png)
 
 ## Example of Detection and Tracking
 
