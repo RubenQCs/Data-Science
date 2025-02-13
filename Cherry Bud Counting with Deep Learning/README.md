@@ -22,8 +22,10 @@ This project demonstrates the feasibility of using computer vision models to aut
 ![Labels](plots/Labels.png)
 ![Results](plots/Detection.png)
 
-## 🎥 Ejemplo de Detección y Tracking!  
+## Example of Detection and Tracking
 
-📌 **Ver el video en Google Drive:**  
+Here you can watch a video with the results:  
+
+📌 **Google Drive:**  
 [📹 Ver Video en Google Drive](https://drive.google.com/file/d/1aVlfPb2faK_1FdpfB963sCQz1F6UHq44/view?usp=sharing)
 
