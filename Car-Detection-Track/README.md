@@ -93,7 +93,7 @@ cap.release()
 cv2.destroyAllWindows()
 
 ```
-![Image](plots/Pic.png)
+![Image](output/Pic.png)
 ## Example of Detection and Tracking
 
 Here you can watch a video with the results:  
