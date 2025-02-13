@@ -140,39 +140,8 @@ print("Table saved as 'bbva_descriptive_statistics.jpg'.")
 ![Table II](plots/bbva_descriptive_statistics.jpg)
 
 ```Python
-
-# Capture `.info()` output
-buffer = io.StringIO()
-hist.info(buf=buffer)
-info_text = buffer.getvalue()  # Store output as string
-
-# Convert info text to structured data for the table
-info_lines = info_text.split("\n")  # Split by lines
-info_data = [line.strip().split(None, 4) for line in info_lines if line.strip()]  # Process lines
-info_table = [line for line in info_data if len(line) > 2]  # Keep relevant rows
-
-# Extract headers
-headers = ["#", "Column", "Non-Null Count", "Data Type"]
-
-# Remove redundant row and keep only relevant table data
-info_table = info_table[2:]  # Skip metadata lines
-
-# 🔹 Plot and save table as JPG
-fig, ax = plt.subplots(figsize=(10, 4))  # Adjust figure size
-ax.axis('tight')
-ax.axis('off')  # Hide axes
-
-# Create table
-table = ax.table(cellText=info_table, colLabels=headers, cellLoc='center', loc='center')
-
-table.auto_set_font_size(False)
-table.set_fontsize(10)
-table.scale(1.2, 1.2)  # Adjust size
-
-# Save as JPG
-plt.savefig("bbva_data_info.jpg", format="jpg", dpi=300, bbox_inches="tight")
-plt.close()
-
+# Info about data
+hist.info()
 print("Table saved as 'bbva_data_info.jpg'.")
 ´´´
-![Table III](plots/bbva_descriptive_statistics.jpg)
+![Table IV](plots/BBVA_info_data.jpg)
