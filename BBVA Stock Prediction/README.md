@@ -28,14 +28,51 @@ This project aims to demonstrate how Machine Learning techniques can be applied 
 import yfinance as yf
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import pandas as pd
 
 # Descargar datos históricos de BBVA (Bolsa de Madrid)
 bbva = yf.Ticker("BBVA.MC")
 hist = bbva.history(period="max")
 
-# Crear la figura
+# Seleccionar solo las columnas requeridas
+hist = hist[['Open', 'High', 'Low', 'Close', 'Volume']]
+hist.reset_index(inplace=True)  # Convertir índice (fecha) en columna normal
+
+#Formatear la columna Date para que solo muestre "YYYY-MM-DD"
+hist['Date'] = hist['Date'].dt.strftime('%Y-%m-%d')
+
+# Redondear valores a 2 decimales
+hist[['Open', 'High', 'Low', 'Close']] = hist[['Open', 'High', 'Low', 'Close']].round(2)
+
+# Mostrar las últimas 10 filas
+hist_tail = hist.tail(10)
+
+# Mostrar tabla en consola
+print("Datos históricos de BBVA (últimos 10 registros):")
+print(hist_tail)
+
+# Guardar tabla como imagen
+fig, ax = plt.subplots(figsize=(10, 3))  # Crear figura
+ax.axis('tight')
+ax.axis('off')  # Ocultar ejes
+table_data = hist_tail.values  # Datos sin encabezados
+column_labels = hist_tail.columns  # Encabezados
+
+# Crear tabla en la imagen
+table = ax.table(cellText=table_data, colLabels=column_labels, cellLoc='center', loc='center')
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1.2, 1.2)  # Ajustar tamaño
+
+# Guardar tabla en JPG
+plt.savefig("bbva_tabla_historica.jpg", format="jpg", dpi=300, bbox_inches="tight")
+plt.close()
+
+print("Tabla guardada como 'bbva_tabla_historica.jpg'")
+
+# Gráfico del precio del stock
 plt.figure(figsize=(10,5))
-plt.plot(hist.index, hist["Close"], label="Precio de Cierre", color="b", linewidth=0.8)  # Línea más delgada
+plt.plot(hist["Date"], hist["Close"], label="Precio de Cierre", color="b", linewidth=0.8)
 
 # Personalización del gráfico
 plt.xlabel("Año")
@@ -45,21 +82,21 @@ plt.legend()
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 
 # Configurar ticks mayores y menores en el eje X (años)
-ax = plt.gca()  # Obtener eje actual
-ax.xaxis.set_major_locator(mdates.YearLocator(5))  # Ticks mayores cada 5 años
-ax.xaxis.set_minor_locator(mdates.YearLocator(1))  # Ticks menores cada 1 año
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # Formato de año en ticks mayores
+ax = plt.gca()
+ax.xaxis.set_major_locator(mdates.YearLocator(5))
+ax.xaxis.set_minor_locator(mdates.YearLocator(1))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 
 # Configurar ticks menores en el eje Y (precio)
-ax.yaxis.set_minor_locator(plt.MultipleLocator(1))  # Ticks menores cada 1 unidad en el precio
+ax.yaxis.set_minor_locator(plt.MultipleLocator(1))
 
-# Guardar el gráfico en formato JPG con alta calidad
-plt.savefig("bbva_precio_historico.jpg", format='jpg', dpi=300)  
-
-# Mostrar el gráfico
+# Guardar el gráfico en JPG
+plt.savefig("bbva_precio_historico.jpg", format='jpg', dpi=300)
 plt.show()
 
 print("Gráfico guardado como 'bbva_precio_historico.jpg'")
 
+
 ```
-![Data](plots/bbva_precio_historico.jpg)
+![Plot](plots/bbva_precio_historico.jpg)
+![Table](plots/bbva_tabla_historica.jpg)
