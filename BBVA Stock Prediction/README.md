@@ -58,7 +58,7 @@ ax.axis('off')  # Ocultar ejes
 table_data = hist_tail.values  # Datos sin encabezados
 column_labels = hist_tail.columns  # Encabezados
 
-# Crear tabla en la imagen
+# Crear tabla 
 table = ax.table(cellText=table_data, colLabels=column_labels, cellLoc='center', loc='center')
 table.auto_set_font_size(False)
 table.set_fontsize(10)
@@ -133,7 +133,7 @@ fig, ax = plt.subplots(figsize=(10, 4))  # Adjust figure size
 ax.axis('tight')
 ax.axis('off')  # Hide axes
 
-# Create table
+# crear tabla
 table = ax.table(cellText=desc_stats_str.values, 
                  colLabels=desc_stats_str.columns, 
                  rowLabels=desc_stats_str.index, 
@@ -143,7 +143,7 @@ table.auto_set_font_size(False)
 table.set_fontsize(10)
 table.scale(1.2, 1.2)  # Adjust size
 
-# Save as JPG
+# guardar JPG
 plt.savefig("bbva_descriptive_statistics.jpg", format="jpg", dpi=300, bbox_inches="tight")
 plt.close()
 
@@ -153,7 +153,7 @@ print("Table saved as 'bbva_descriptive_statistics.jpg'.")
 ![Table II](plots/bbva_descriptive_statistics.jpg)
 
 ```Python
-# Info about data
+# Información de los datos
 hist.info()
 print("Table saved as 'bbva_data_info.jpg'.")
 ```
@@ -193,11 +193,11 @@ ax1.xaxis.set_major_locator(mdates.YearLocator(5))
 ax1.xaxis.set_minor_locator(mdates.YearLocator(1))
 ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 
-# Dibujar líneas de conexión con el zoom
+# Dibujar líneas del Zoom
 ax1.axvline(hist_zoom["Date"].iloc[0], color="gray", linestyle="--", linewidth=1.2)
 ax1.axvline(hist_zoom["Date"].iloc[-1], color="gray", linestyle="--", linewidth=1.2)
 
-# Subplot de zoom centrado arriba
+# Subplot de zoom 
 ax_zoom = fig.add_axes([0.45, 0.6, 0.3, 0.3])  # [left, bottom, width, height]
 ax_zoom.plot(hist_zoom["Date"], hist_zoom["Close"], label="Precio de Cierre", color="b", linewidth=1.2)
 ax_zoom.plot(hist_zoom["Date"], hist_zoom["MA 10"], color="r", linewidth=0.8)
@@ -207,7 +207,7 @@ ax_zoom.set_title("Zoom: Últimos 365 días", fontsize=10)
 ax_zoom.tick_params(axis='both', labelsize=8)
 ax_zoom.grid(True, linestyle='--', linewidth=0.5)
 
-# ✅ Configurar el eje X del zoom para mostrar solo año y mes
+# Configurar el eje X del zoom 
 ax_zoom.xaxis.set_major_locator(mdates.MonthLocator(interval=2))
 plt.setp(ax_zoom.xaxis.get_majorticklabels(), rotation=60)
   # Etiquetas cada 2 meses
