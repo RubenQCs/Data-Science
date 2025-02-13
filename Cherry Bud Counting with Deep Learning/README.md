@@ -19,8 +19,8 @@ The model achieved an **87% mAP** and **74.6% precision**, effectively detecting
 
 This project demonstrates the feasibility of using computer vision models to automate bud counting in cherry orchards, optimizing agricultural processes through artificial intelligence.
 
-![Labels](plots/Labels.jpg)
-![Results](plots/Detecction.jpg)
+![Labels](plots/Labels.png)
+![Results](plots/Detecction.png)
 
 ## 🎥 Ejemplo de Detección y Tracking  
 
