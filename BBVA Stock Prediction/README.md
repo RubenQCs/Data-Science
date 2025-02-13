@@ -100,3 +100,40 @@ print("Gráfico guardado como 'bbva_precio_historico.jpg'")
 ```
 ![Plot](plots/bbva_precio_historico.jpg)
 ![Table](plots/bbva_tabla_historica.jpg)
+
+2. **Display descriptive statistics**
+
+```Python
+desc_stats = hist.describe()
+
+# Print statistics to the console
+print("📊 Descriptive Statistics for BBVA Stock Data:")
+print(desc_stats)
+
+
+# 🔹 Convert DataFrame to string format for display
+desc_stats_rounded = desc_stats.round(3)  # Round values for better readability
+desc_stats_str = desc_stats_rounded.astype(str)
+
+# 🔹 Plot and save table as JPG
+fig, ax = plt.subplots(figsize=(10, 4))  # Adjust figure size
+ax.axis('tight')
+ax.axis('off')  # Hide axes
+
+# Create table
+table = ax.table(cellText=desc_stats_str.values, 
+                 colLabels=desc_stats_str.columns, 
+                 rowLabels=desc_stats_str.index, 
+                 cellLoc='center', loc='center')
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1.2, 1.2)  # Adjust size
+
+# Save as JPG
+plt.savefig("bbva_descriptive_statistics.jpg", format="jpg", dpi=300, bbox_inches="tight")
+plt.close()
+
+print("Table saved as 'bbva_descriptive_statistics.jpg'.")
+
+```
