@@ -9,8 +9,6 @@ The goal of this project is to develop an efficient solution for traffic analysi
  **Tracking each vehicle** as it moves through the scene.  
  **Counting detected vehicles**.  
 
-This system can be applied in various scenarios, such as **traffic monitoring, toll management, vehicle flow analysis, and smart cities**.  
-
 ## Technologies Used  
 - **YOLOv8** for real-time detection.  
 - **DeepSORT** for vehicle tracking.  
