@@ -13,5 +13,6 @@ Welcome to my Data Science repository! I am a Ph.D. in Physics, passionate about
 This repository is a showcase of my skills and experience in Data Science. It is designed both to share knowledge and to connect with other professionals interested in data science.  
 
 📫 **Contact**  
-If you have any questions or suggestions: ruben.cpg@gmail.com 
+If you have any questions or suggestions: ruben.cpg@gmail.com
+
 I’m open to collaborations and new opportunities! 
