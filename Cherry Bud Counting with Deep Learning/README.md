@@ -1,4 +1,4 @@
-# Cherry Bud Counting with Deep Learning
+#🍒 Cherry Bud Counting with Deep Learning
 
 This project leverages artificial intelligence techniques for detecting and counting cherry buds in orchards, focusing only on clusters with three or more buds. To achieve this, a **YOLOv5** object detection model is implemented, combined with the **DeepSort** algorithm for tracking and maintaining detection persistence, avoiding duplicate counts.
 
