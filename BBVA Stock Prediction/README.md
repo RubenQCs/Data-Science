@@ -143,5 +143,5 @@ print("Table saved as 'bbva_descriptive_statistics.jpg'.")
 # Info about data
 hist.info()
 print("Table saved as 'bbva_data_info.jpg'.")
-´´´
+```
 ![Table IV](plots/BBVA_info_data.jpg)
