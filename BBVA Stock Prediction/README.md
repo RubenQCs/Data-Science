@@ -70,35 +70,48 @@ plt.close()
 
 print("Tabla guardada como 'bbva_tabla_historica.jpg'")
 
-# Gráfico del precio del stock
-plt.figure(figsize=(10,5))
-plt.plot(hist["Date"], hist["Close"], label="Precio de Cierre", color="b", linewidth=0.8)
+# Gráfico del precio del stock y Volumen
+# Convertir la columna 'Date' a formato datetime
+hist['Date'] = pd.to_datetime(hist['Date'])
 
-# Personalización del gráfico
-plt.xlabel("Año")
-plt.ylabel("Precio (EUR)")
-plt.title("Evolución Histórica del Precio de BBVA")
-plt.legend()
-plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+# Crear una figura con dos subgráficas (2 columnas)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))  # 1 fila, 2 columnas
 
-# Configurar ticks mayores y menores en el eje X (años)
-ax = plt.gca()
-ax.xaxis.set_major_locator(mdates.YearLocator(5))
-ax.xaxis.set_minor_locator(mdates.YearLocator(1))
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+# Gráfico del precio histórico vs fecha (Figura 1)
+ax1.plot(hist["Date"], hist["Close"], label="Precio de Cierre", color="b", linewidth=0.8)
+ax1.set_xlabel("Año")
+ax1.set_ylabel("Precio (EUR)")
+ax1.set_title("Evolución Histórica del Precio de BBVA")
+ax1.legend()
+ax1.grid(True, which='both', linestyle='--', linewidth=0.5)
+ax1.xaxis.set_major_locator(mdates.YearLocator(5))  # Ticks mayores cada 5 años
+ax1.xaxis.set_minor_locator(mdates.YearLocator(1))  # Ticks menores cada 1 año
+ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # Formato de año
 
-# Configurar ticks menores en el eje Y (precio)
-ax.yaxis.set_minor_locator(plt.MultipleLocator(1))
+# Gráfico del volumen histórico vs fecha (Figura 2)
+ax2.plot(hist["Date"], hist["Volume"], label="Volumen", color="g", linewidth=0.8)
+ax2.set_xlabel("Año")
+ax2.set_ylabel("Volumen de Acción")
+ax2.set_title("Volumen de Acciones de BBVA")
+ax2.legend()
+ax2.grid(True, which='both', linestyle='--', linewidth=0.5)
+ax2.xaxis.set_major_locator(mdates.YearLocator(5))  # Ticks mayores cada 5 años
+ax2.xaxis.set_minor_locator(mdates.YearLocator(1))  # Ticks menores cada 1 año
+ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # Formato de año
+
+# Ajustar los espacios entre las subgráficas
+plt.tight_layout()
 
 # Guardar el gráfico en JPG
-plt.savefig("bbva_precio_historico.jpg", format='jpg', dpi=300)
+plt.savefig("bbva_precio_y_volumen_historico.jpg", format='jpg', dpi=300)
+
+# Mostrar los gráficos
 plt.show()
 
-print("Gráfico guardado como 'bbva_precio_historico.jpg'")
-
+print("Gráfico guardado como 'bbva_precio_y_volumen_historico.jpg'")
 
 ```
-![Plot](plots/bbva_precio_historico.jpg)
+![Plot](plots/bbva_precio_y_volumen_historico.jpg)
 ![Table I](plots/bbva_tabla_historica.jpg)
 
 2. **Display descriptive statistics and information about the data**
