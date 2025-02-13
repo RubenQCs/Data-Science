@@ -6,7 +6,7 @@ This repository contains a project aimed at **predicting the stock price of BBVA
 ## 🔍 **What’s in this repository?**  
 - Downloading historical BBVA data.
 - Exploratory Data Analysis (EDA) and trend visualization.  
-- Application of Machine Learning models such as **Linear Regression, Random Forest, and Neural Networks**. 
+- Application of Machine Learning models. 
 - Evaluation of model performance using metrics like **RMSE**.  
 - Predictions and result visualization.  
 
