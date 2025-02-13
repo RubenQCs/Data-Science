@@ -158,3 +158,71 @@ hist.info()
 print("Table saved as 'bbva_data_info.jpg'.")
 ```
 ![Table IV](plots/BBVA_info_data.jpg)
+
+
+
+
+2. **Moving average**
+
+```Python
+
+# Calcular las medias móviles para 10, 20 y 50 días
+ma_days = [10, 20, 50]
+for ma in ma_days:
+    hist[f'MA {ma}'] = hist['Close'].rolling(ma).mean()
+
+# Definir el período de zoom (últimos 365 días)
+hist_zoom = hist.tail(365)
+
+# Crear la figura principal
+fig, ax1 = plt.subplots(figsize=(12, 6))
+
+# Gráfico principal: Precio y medias móviles
+ax1.plot(hist["Date"], hist["Close"], label="Precio de Cierre", color="b", linewidth=1)
+ax1.plot(hist["Date"], hist["MA 10"], label="MA 10 días", color="r", linewidth=0.8)
+ax1.plot(hist["Date"], hist["MA 20"], label="MA 20 días", color="g", linewidth=0.8)
+ax1.plot(hist["Date"], hist["MA 50"], label="MA 50 días", color="orange", linewidth=0.8)
+
+# Configuración del gráfico principal
+ax1.set_xlabel("Año")
+ax1.set_ylabel("Precio (EUR)")
+ax1.set_title("Evolución Histórica del Precio de BBVA y Medias Móviles")
+ax1.legend()
+ax1.grid(True, which='both', linestyle='--', linewidth=0.5)
+ax1.xaxis.set_major_locator(mdates.YearLocator(5))
+ax1.xaxis.set_minor_locator(mdates.YearLocator(1))
+ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+
+# Dibujar líneas de conexión con el zoom
+ax1.axvline(hist_zoom["Date"].iloc[0], color="gray", linestyle="--", linewidth=1.2)
+ax1.axvline(hist_zoom["Date"].iloc[-1], color="gray", linestyle="--", linewidth=1.2)
+
+# Subplot de zoom centrado arriba
+ax_zoom = fig.add_axes([0.45, 0.6, 0.3, 0.3])  # [left, bottom, width, height]
+ax_zoom.plot(hist_zoom["Date"], hist_zoom["Close"], label="Precio de Cierre", color="b", linewidth=1.2)
+ax_zoom.plot(hist_zoom["Date"], hist_zoom["MA 10"], color="r", linewidth=0.8)
+ax_zoom.plot(hist_zoom["Date"], hist_zoom["MA 20"], color="g", linewidth=0.8)
+ax_zoom.plot(hist_zoom["Date"], hist_zoom["MA 50"], color="orange", linewidth=0.8)
+ax_zoom.set_title("Zoom: Últimos 365 días", fontsize=10)
+ax_zoom.tick_params(axis='both', labelsize=8)
+ax_zoom.grid(True, linestyle='--', linewidth=0.5)
+
+# ✅ Configurar el eje X del zoom para mostrar solo año y mes
+ax_zoom.xaxis.set_major_locator(mdates.MonthLocator(interval=2))
+plt.setp(ax_zoom.xaxis.get_majorticklabels(), rotation=60)
+  # Etiquetas cada 2 meses
+ax_zoom.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))  # Formato Año-Mes
+
+# Ajustar la disposición de la figura
+plt.tight_layout()
+
+# Guardar el gráfico en JPG
+plt.savefig("bbva_precio_con_ma_zoom_centrado.jpg", format='jpg', dpi=300, bbox_inches="tight")
+
+# Mostrar los gráficos
+plt.show()
+
+print("Gráfico guardado como 'bbva_precio_con_ma_zoom_centrado.jpg'")
+
+```
+![Moving average](plots/bbva_precio_con_ma_zoom_centrado.jpg)
