@@ -99,7 +99,7 @@ print("Gráfico guardado como 'bbva_precio_historico.jpg'")
 
 ```
 ![Plot](plots/bbva_precio_historico.jpg)
-![Table](plots/bbva_tabla_historica.jpg)
+![Table I](plots/bbva_tabla_historica.jpg)
 
 2. **Display descriptive statistics**
 
@@ -135,5 +135,6 @@ plt.savefig("bbva_descriptive_statistics.jpg", format="jpg", dpi=300, bbox_inche
 plt.close()
 
 print("Table saved as 'bbva_descriptive_statistics.jpg'.")
-
 ```
+
+![Table II](plots/bbva_descriptive_statistics.jpg)
