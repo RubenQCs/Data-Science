@@ -118,15 +118,15 @@ print("Gráfico guardado como 'bbva_precio_y_volumen_historico.jpg'")
 desc_stats = hist.describe()
 
 # Print statistics to the console
-print("📊 Descriptive Statistics for BBVA Stock Data:")
+print("Descriptive Statistics for BBVA Stock Data:")
 print(desc_stats)
 
 
-# 🔹 Convert DataFrame to string format for display
+#  Convert DataFrame to string format for display
 desc_stats_rounded = desc_stats.round(3)  # Round values for better readability
 desc_stats_str = desc_stats_rounded.astype(str)
 
-# 🔹 Plot and save table as JPG
+#  Plot and save table as JPG
 fig, ax = plt.subplots(figsize=(10, 4))  # Adjust figure size
 ax.axis('tight')
 ax.axis('off')  # Hide axes
