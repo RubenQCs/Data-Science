@@ -432,6 +432,34 @@ print("Gráfico guardado como bbva_predicciones.jpg")
 
 plt.show()
 
+
+comparison_df = valid[['Close', 'Predictions']].copy()
+comparison_df = comparison_df.round(2)  # Redondear para mejor visualización
+comparison_df = comparison_df.tail(10)  # Seleccionar los últimos 10 registros
+
+#tabla
+fig, ax = plt.subplots(figsize=(8, 5))
+ax.set_title("Últimos 10 valores", fontsize=14, fontweight="bold", pad=15)
+ax.axis('tight')
+ax.axis('off')
+
+table = ax.table(cellText=comparison_df.values, 
+                 colLabels=comparison_df.columns, 
+                 cellLoc='center', 
+                 loc='center')
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1.2, 1.2)
+
+# Guardar 
+plt.savefig("bbva_comparacion_real_vs_pred.jpg", format="jpg", dpi=300, bbox_inches="tight")
+plt.close()
+
+print("Tabla guardada como 'bbva_comparacion_real_vs_pred.jpg'")
+
+
 ```
 ![resuilts](plots/bbva_predicciones.jpg)
+![Table](plots/bbva_comparacion_real_vs_pred.jpg)
 
