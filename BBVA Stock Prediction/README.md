@@ -286,3 +286,42 @@ print(" Histograma del rendimiento diario guardado como 'bbva_daily_return_histo
 
 ```
 ![histogram](plots/bbva_daily_return_histogram.jpg)
+
+
+4. **Riego**
+```Python
+rets = hist["Daily Return"].dropna()
+
+# Definir tamaño del punto en el gráfico
+area = np.pi * 50  
+
+# Crear la figura
+plt.figure(figsize=(8, 6))
+plt.scatter(rets.mean(), rets.std(), s=area, color="purple", alpha=0.6, edgecolor="black")
+
+# Etiquetas y título
+plt.xlabel("Rentabilidad Esperada")
+plt.ylabel("Riesgo")
+plt.title("Relación Riesgo vs. Rentabilidad - BBVA")
+
+# Rotar los labels del eje X
+plt.xticks(rotation=60)
+
+# Anotación del punto de BBVA
+plt.annotate("BBVA", xy=(rets.mean(), rets.std()), xytext=(30, -30), 
+             textcoords="offset points", ha="right", va="bottom", 
+             arrowprops=dict(arrowstyle="->", color="blue", lw=1.5))
+
+# Guardar el gráfico
+plt.savefig("bbva_rentabilidad_vs_riesgo.jpg", format="jpg", dpi=300, bbox_inches="tight")
+
+# Mostrar el gráfico
+plt.show()
+
+
+print("Gráfico guardado como 'bbva_rentabilidad_vs_riesgo.jpg'")
+
+```
+![Risk](plots/bbva_rentabilidad_vs_riesgo.jpg)
+
+
