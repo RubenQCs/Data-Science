@@ -424,15 +424,14 @@ plt.ylabel('Precio de Cierre (EUR)', fontsize=14)
 plt.plot(train['Close'], label='Entrenamiento', color='blue')
 plt.plot(valid[['Predictions']], label='Predicciones', color='red')
 plt.legend(loc='lower right')
-plt.xticks(rotation=60)
 
 
 plt.savefig("bbva_predicciones_solo_train.jpg", format="jpg", dpi=300, bbox_inches="tight")
-print("Gráfico guardado como bbva_predicciones_solo_train.jpg")
+print("Gráfico guardado como bbva_predicciones.jpg")
 
 
 plt.show()
 
 ```
-![resuilts](plots/bbva_daily_return_histogram.jpg)
+![resuilts](plots/bbva_predicciones.jpg)
 
