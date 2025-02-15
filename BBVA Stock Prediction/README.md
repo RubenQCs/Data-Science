@@ -265,3 +265,24 @@ print("Gráfico de rendimiento diario guardado como 'bbva_daily_return.jpg'")
 ```
 ![Daily Return](plots/bbva_daily_return.jpg)
 
+```Python
+# Histograma del rendimiento diario
+plt.figure(figsize=(10, 6))
+plt.hist(hist["Daily Return"].dropna(), bins=50, color="blue", alpha=0.7, edgecolor="black")
+
+
+plt.xlabel("Rendimiento Diario")
+plt.ylabel("Frecuencia")
+plt.title("Distribución del Rendimiento Diario de BBVA")
+plt.grid(axis="y", linestyle="--", linewidth=0.5, alpha=0.7)
+
+
+plt.savefig("bbva_daily_return_histogram.jpg", format="jpg", dpi=300, bbox_inches="tight")
+
+
+plt.show()
+
+print(" Histograma del rendimiento diario guardado como 'bbva_daily_return_histogram.jpg'")
+
+```
+![histogram](plots/bbva_daily_return_histogram.jpg)
