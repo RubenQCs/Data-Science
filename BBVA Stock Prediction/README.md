@@ -224,3 +224,44 @@ print("Gráfico guardado como 'bbva_precio_con_ma_zoom_centrado.jpg'")
 
 ```
 ![Moving average](plots/bbva_precio_con_ma_zoom_centrado.jpg)
+
+
+3. **Daily return**
+```Python
+
+# rendimiento diario
+hist['Daily Return'] = hist['Close'].pct_change()
+
+
+print("📈 Daily Return (primeros 10 registros):")
+print(hist[['Date', 'Close', 'Daily Return']].head(10))
+
+# Graficar el rendimiento diario
+plt.figure(figsize=(12, 5))
+plt.plot(hist["Date"], hist["Daily Return"], label="Rendimiento Diario", color="blue", linewidth=0.8)
+
+
+plt.xlabel("Año")
+plt.ylabel("Rendimiento Diario (%)")
+plt.title("Rendimiento Diario del BBVA")
+plt.axhline(0, color='black', linewidth=0.5, linestyle='--')  # Línea de referencia en 0
+plt.legend()
+plt.grid(True, linestyle='--', linewidth=0.5)
+
+ax = plt.gca()
+ax.xaxis.set_major_locator(mdates.YearLocator(5))  
+ax.xaxis.set_minor_locator(mdates.YearLocator(1))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+
+# Guardar el gráfico
+plt.savefig("bbva_daily_return.jpg", format='jpg', dpi=300, bbox_inches="tight")
+
+
+plt.show()
+
+print("Gráfico de rendimiento diario guardado como 'bbva_daily_return.jpg'")
+
+
+```
+![Daily Return](plots/bbva_daily_return.jpg)
+
