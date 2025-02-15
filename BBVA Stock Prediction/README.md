@@ -325,3 +325,114 @@ print("Gráfico guardado como 'bbva_rentabilidad_vs_riesgo.jpg'")
 ![Risk](plots/bbva_rentabilidad_vs_riesgo.jpg)
 
 
+
+
+5. **Model and results**
+
+```Python
+
+
+def preprocess_data(data, train_size=0.95, time_step=60):
+    """Escala los datos y los divide en conjunto de entrenamiento y prueba."""
+    dataset = data.values
+    training_data_len = int(np.ceil(len(dataset) * train_size))
+
+    # Escalar datos entre 0 y 1
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    scaled_data = scaler.fit_transform(dataset)
+
+    # Crear conjuntos de entrenamiento
+    train_data = scaled_data[:training_data_len]
+    x_train, y_train = [], []
+
+    for i in range(time_step, len(train_data)):
+        x_train.append(train_data[i-time_step:i, 0])
+        y_train.append(train_data[i, 0])
+
+    return np.array(x_train), np.array(y_train), scaled_data, training_data_len, scaler
+
+def build_lstm_model(input_shape):
+    """Construye y compila un modelo LSTM mejorado."""
+    model = Sequential([
+        LSTM(128, return_sequences=True, input_shape=input_shape),
+        # Evita sobreajuste
+
+        LSTM(64, return_sequences=True),
+   
+
+        LSTM(32, return_sequences=False),
+
+
+        Dense(25, activation="relu"),  # Agrega no linealidad
+        Dense(1)
+    ])
+
+    model.compile(optimizer='adam', loss='mean_squared_error')
+    return model
+
+
+
+
+def prepare_test_data(scaled_data, training_data_len, time_step=60):
+    """Prepara los datos de prueba."""
+    test_data = scaled_data[training_data_len - time_step:]
+    x_test, y_test = [], scaled_data[training_data_len:, :]
+
+    for i in range(time_step, len(test_data)):
+        x_test.append(test_data[i-time_step:i, 0])
+
+    return np.array(x_test), y_test
+
+
+
+data = hist.filter(['Close'])  # Asegúrate de que 'hist' contenga los datos de BBVA
+
+# Preprocesar los datos
+x_train, y_train, scaled_data, training_data_len, scaler = preprocess_data(data)
+
+x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+
+# Construir y entrenar el modelo
+model = build_lstm_model((x_train.shape[1], 1))
+model.fit(x_train, y_train, batch_size=1, epochs=1)
+
+# Preparar datos de prueba y hacer predicciones
+x_test, y_test = prepare_test_data(scaled_data, training_data_len)
+x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+predictions = model.predict(x_test)
+predictions = scaler.inverse_transform(predictions)
+valid = data[training_data_len:]
+valid['Predictions'] = predictions
+
+# Calcular RMSE
+rmse = np.sqrt(np.mean((predictions - scaler.inverse_transform(y_test)) ** 2))
+print(f"RMSE: {rmse}")
+# Calcular R²
+r2 = r2_score(scaler.inverse_transform(y_test) , predictions)
+print(f"R²: {r2}")
+
+# Graficar los resultados 
+train = data[:training_data_len]
+plt.figure(figsize=(16, 6))
+plt.title('Predicción del Precio de BBVA con LSTM')
+plt.xlabel('Fecha', fontsize=14)
+plt.text(0.05, 0.95, f'RMSE: {rmse:.2f}\nR²: {r2:.4f}', 
+         transform=plt.gca().transAxes, fontsize=12,
+         verticalalignment='top', bbox=dict(facecolor='white', alpha=0.5))
+
+plt.ylabel('Precio de Cierre (EUR)', fontsize=14)
+plt.plot(train['Close'], label='Entrenamiento', color='blue')
+plt.plot(valid[['Predictions']], label='Predicciones', color='red')
+plt.legend(loc='lower right')
+plt.xticks(rotation=60)
+
+
+plt.savefig("bbva_predicciones_solo_train.jpg", format="jpg", dpi=300, bbox_inches="tight")
+print("Gráfico guardado como bbva_predicciones_solo_train.jpg")
+
+
+plt.show()
+
+```
+![resuilts](plots/bbva_daily_return_histogram.jpg)
+
