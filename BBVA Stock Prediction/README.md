@@ -288,7 +288,7 @@ print(" Histograma del rendimiento diario guardado como 'bbva_daily_return_histo
 ![histogram](plots/bbva_daily_return_histogram.jpg)
 
 
-4. **Riego**
+4. **Risk**
 ```Python
 rets = hist["Daily Return"].dropna()
 
