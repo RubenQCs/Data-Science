@@ -466,4 +466,7 @@ print("Tabla guardada como 'bbva_comparacion_real_vs_pred.jpg'")
 ```
 ![resuilts](plots/bbva_predicciones.jpg)
 ![Table](plots/bbva_comparacion_real_vs_pred.jpg)
+![PLOTS](plots/bbva_comparacion_predicciones.jpg)
+
+
 
