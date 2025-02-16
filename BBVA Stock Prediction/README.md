@@ -1,5 +1,4 @@
 # 📈BVA Stock Price Prediction with Machine Learning
-**Note:** This project is currently **in progress**.
 
 This repository contains a project aimed at **predicting the stock price of BBVA** using **Machine Learning** techniques. The goal is to analyze historical BBVA data and build models to estimate its future price movements.
 
@@ -158,9 +157,8 @@ print("Table saved as 'bbva_data_info.jpg'.")
 ![Table IV](plots/BBVA_info_data.jpg)
 
 
-
-
-2. **Moving average**
+3. **Moving average**
+The Moving Average (MA) is a widely used technique in time series analysis to smooth short-term fluctuations and identify trends.
 
 ```Python
 
@@ -226,7 +224,9 @@ print("Gráfico guardado como 'bbva_precio_con_ma_zoom_centrado.jpg'")
 ![Moving average](plots/bbva_precio_con_ma_zoom_centrado.jpg)
 
 
-3. **Daily return**
+4. **Daily return**
+The Daily Return measures the percentage change in stock price from one day to the next.
+
 ```Python
 
 # rendimiento diario
@@ -288,7 +288,7 @@ print(" Histograma del rendimiento diario guardado como 'bbva_daily_return_histo
 ![histogram](plots/bbva_daily_return_histogram.jpg)
 
 
-4. **Risk**
+5. **Risk**
 ```Python
 rets = hist["Daily Return"].dropna()
 
@@ -327,7 +327,8 @@ print("Gráfico guardado como 'bbva_rentabilidad_vs_riesgo.jpg'")
 
 
 
-5. **Model and results**
+6. **Model and results**
+LSTM (Long Short-Term Memory) is a type of Recurrent Neural Network (RNN) designed to handle sequential data and capture long-term dependencies.
 
 ```Python
 
