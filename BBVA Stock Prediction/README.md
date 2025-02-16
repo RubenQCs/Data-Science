@@ -158,6 +158,7 @@ print("Table saved as 'bbva_data_info.jpg'.")
 
 
 3. **Moving average**
+   
 The Moving Average (MA) is a widely used technique in time series analysis to smooth short-term fluctuations and identify trends.
 
 ```Python
@@ -225,6 +226,7 @@ print("Gráfico guardado como 'bbva_precio_con_ma_zoom_centrado.jpg'")
 
 
 4. **Daily return**
+   
 The Daily Return measures the percentage change in stock price from one day to the next.
 
 ```Python
@@ -328,6 +330,7 @@ print("Gráfico guardado como 'bbva_rentabilidad_vs_riesgo.jpg'")
 
 
 6. **Model and results**
+   
 LSTM (Long Short-Term Memory) is a type of Recurrent Neural Network (RNN) designed to handle sequential data and capture long-term dependencies.
 
 ```Python
