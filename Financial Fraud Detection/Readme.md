@@ -1,4 +1,4 @@
-# Financial Fraud Detection
+💰# Financial Fraud Detection
 **Note:** This repository is in work progress.
 
 ## Introduction
