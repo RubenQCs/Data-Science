@@ -1,6 +1,6 @@
-# 🚗 Vehicle Detection, Tracking, and Counting with YOLO  
+# Financial Fraud Detection
+**Note:** This repository is in work progress.
 
-This project implements a **vehicle detection, tracking, and counting system** using **YOLO (You Only Look Once)**, an advanced real-time object detection model.  
+## Introduction
 
-## 🔹 Project Description  
-The goal of this projec
+Financial fraud detection is a critical application of machine learning and data analysis, aiming to identify fraudulent transactions and prevent financial crimes. This repository focuses on developing and implementing machine learning models to detect financial fraud efficiently. 
