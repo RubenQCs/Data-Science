@@ -1,4 +1,4 @@
-# 💰Financial Fraud Detection
+# [...Work in progress..]💰Financial Fraud Detection
 **Note:** This repository is in work progress.
 
 ## Introduction
@@ -59,4 +59,8 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 - **EBIT**: Earnings before interest and taxes over total assets  
 - **issue**: Actual issuance  
 - **bm**: Book-to-market
+
+### 1.Exploratory data analysis:
+
+![Histogram](plots/Fraudes.jpg)
 
