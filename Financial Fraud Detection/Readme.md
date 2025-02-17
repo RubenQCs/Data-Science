@@ -10,7 +10,7 @@ This repository focuses on developing and implementing machine learning models t
 You can download the dataset from here:  
 [📥 Download Dataset](https://docs.google.com/spreadsheets/d/1ANOYFKEC7GJtriPFpXc3PNvHanHP3oXJ/edit?usp=share_link&ouid=111569509993326914459&rtpof=true&sd=true)
 
-This dataset contains financial data from companies traded on the NYSE, NASDAQ, NYSE American, and other markets. 
+This dataset contains financial data from companies traded on the NYSE, NASDAQ, NYSE American, and other markets. Here, the variable "misstate" is the fraud label (1 denotes fraud, and 0 denotes non-fraud).
 
 ### The description of the 28 raw accounting variables are as follows:
 
