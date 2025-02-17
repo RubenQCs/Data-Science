@@ -62,5 +62,5 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 
 ### 1.Exploratory data analysis:
 
-![Histogram](plots/Fraudes.jpg)
+![Histogram](Plots/Fraudes.jpg)
 
