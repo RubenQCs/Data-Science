@@ -65,3 +65,6 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 ![Histogram](Plots/Fraudes.jpg)
 ![Table_I](Plots/Table.jpg)
 
+### 2.Model:
+Implementation of logistic regression for fraud detection
+
