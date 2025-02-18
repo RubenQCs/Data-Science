@@ -68,3 +68,6 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 ### 2.Model:
 Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014.
 
+![PLot_I](Plots/Regression logistic_1.jpg)
+
+
