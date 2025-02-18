@@ -70,4 +70,6 @@ Implementation of logistic regression for fraud detection. First, we will train 
 
 ![PLot_I](Plots/Regression_logistic_1.jpg)
 
+An AUC of 0.5408 indicates that the model has poor performance, as an AUC value close to 0.5 suggests that the model is no better than a random model at classifying the observations.
+
 
