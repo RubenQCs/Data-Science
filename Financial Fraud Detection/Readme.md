@@ -72,6 +72,10 @@ Implementation of logistic regression for fraud detection. First, we will train 
 
 An AUC of 0.5408 indicates that the model has poor performance, as an AUC value close to 0.5 suggests that the model is no better than a random model at classifying the observations.
 
-![PLot_I](Plots/Regression_logistic_2.jpg)
+![PLot_II](Plots/Regression_logistic_2.jpg)
+
+Using logistic regression, we did not achieve optimal results. However, there are other models for fraud prediction, such as RUSBoost and LightGBM, which tend to perform better in handling imbalanced datasets and capturing more complex patterns in the data.
+
+![PLot_III](Plots/Comparison_ROC_LGBM.jpg)
 
 
