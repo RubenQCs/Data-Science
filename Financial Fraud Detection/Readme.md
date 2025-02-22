@@ -89,6 +89,8 @@ The figure shows the performance of Logistic Regression (with undersampling), Li
 
 Moreover, the LightGBM model attained the highest scores in both precision and recall metrics.
 
+### 3.how we can further improve the model?:
+
 
 
 
