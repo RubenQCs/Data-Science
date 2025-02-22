@@ -84,4 +84,16 @@ There are numerous machine learning models that can be employed for fraud detect
 
 The figure shows the performance of Logistic Regression (with undersampling), LightGBM, and RUSBoost in fraud detection. The results indicate that LightGBM achieved the highest score in the AUC metric.
 
+![PLot_III](Plots/precision_recall_comparison_2.jpg)
+
+Moreover, the LightGBM model attained the highest scores in both precision and recall metrics.
+
+
+
+
+
+
+
+
+
 
