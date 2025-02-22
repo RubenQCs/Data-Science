@@ -73,7 +73,7 @@ Implementation of logistic regression for fraud detection. First, we will train 
 
 ![PLot_I](Plots/Regression_logistic_comparison_.jpg)
 ![PLot_II](Plots/confusion_matrices_comparison.jpg)
-![PLot_III](Plots/report.png)
+![PLot_III](Plots/precision_recall_comparison_logistic_regression.jpg)
 
 
 The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling. In the confusion matrices, we can see that when we improve the imbalance in the data, the model starts to learn about the fraud cases. Therefore, we will also focus on the precision and recall metrics. Precision indicates, of all the cases that the model predicted as positive, how many were actually positive **(useful when false positives are costly)**. Recall, on the other hand, indicates, of all the actual positive cases, how many were correctly identified by the model **(useful when false negatives are costly)**.
