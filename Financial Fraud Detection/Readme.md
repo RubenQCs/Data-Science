@@ -73,7 +73,8 @@ Implementation of logistic regression for fraud detection. First, we will train 
 
 ![PLot_I](Plots/Regression_logistic_comparison.jpg)
 
-An AUC of 0.5408 indicates that the model has poor performance, as an AUC value close to 0.5 suggests that the model is no better than a random model at classifying the observations.
+The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling.
+
 
 ![PLot_II](Plots/Regression_logistic_2.jpg)
 
