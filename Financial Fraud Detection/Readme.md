@@ -71,7 +71,7 @@ The plots show the number of fraud and non-fraud cases on a logarithmic scale as
 ### 2.Model:
 Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014. We will assess the performance of the Logistic Regression models by employing techniques such as oversampling, undersampling, and addressing class imbalance.
 
-![PLot_I](Plots/Regression_logistic_comparison.jpg)
+![PLot_I](Plots/Regression_logistic_comparison_.jpg)
 ![PLot_II](Plots/confusion_matrices_comparison.jpg)
 
 
