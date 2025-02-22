@@ -80,6 +80,6 @@ The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to
 
 There are numerous machine learning models that can be employed for fraud detection, each with distinct advantages depending on the dataset and specific requirements of the task. Among the many options available, LightGBM and RUSBoost stand out as particularly effective approaches. 
 
-![PLot_III](Plots/Comparison_ROC_LGBM.jpg)
+![PLot_III](Plots/Comparison_ROC_LGBM_.jpg)
 
 
