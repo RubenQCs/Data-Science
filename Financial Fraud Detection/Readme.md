@@ -72,6 +72,8 @@ The plots show the number of fraud and non-fraud cases on a logarithmic scale as
 Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014. We will assess the performance of the Logistic Regression models by employing techniques such as oversampling, undersampling, and addressing class imbalance.
 
 ![PLot_I](Plots/Regression_logistic_comparison.jpg)
+![PLot_II](Plots/confusion_matrices_comparison.jpg)
+
 
 The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling.
 
