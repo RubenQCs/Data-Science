@@ -76,7 +76,6 @@ Implementation of logistic regression for fraud detection. First, we will train 
 The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling.
 
 
-![PLot_II](Plots/Regression_logistic_2.jpg)
 
 Using logistic regression, we did not achieve optimal results. However, there are other models for fraud prediction, such as RUSBoost and LightGBM, which tend to perform better in handling imbalanced datasets and capturing more complex patterns in the data.
 
