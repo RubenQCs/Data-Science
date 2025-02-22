@@ -69,9 +69,9 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 The plots show the number of fraud and non-fraud cases on a logarithmic scale as a function of years. Here, we can note that there is a significant imbalance between fraud and non-fraud cases. What can we do about it? There are several solutions to this problem, such as undersampling and oversampling. In this work, we will use undersampling, which reduces the size of the majority class (non-fraud data).
 
 ### 2.Model:
-Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014.
+Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014. We will assess the performance of the Logistic Regression models by employing techniques such as oversampling, undersampling, and addressing class imbalance.
 
-![PLot_I](Plots/Regression_logistic_1.jpg)
+![PLot_I](Plots/Regression_logistic_comparison.jpg)
 
 An AUC of 0.5408 indicates that the model has poor performance, as an AUC value close to 0.5 suggests that the model is no better than a random model at classifying the observations.
 
