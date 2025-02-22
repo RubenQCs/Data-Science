@@ -64,6 +64,8 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 
 ![Histogram](Plots/Fraudes.jpg)
 ![Table_I](Plots/Table.jpg)
+![Histogram](Plots/fraud_vs_nonfraud.jpg)
+
 Here, we can note that there is a significant imbalance between fraud and non-fraud cases. What can we do about it? There are several solutions to this problem, such as undersampling and oversampling. In this work, we will use undersampling, which reduces the size of the majority class (non-fraud data).
 
 ### 2.Model:
