@@ -90,12 +90,13 @@ The figure shows the performance of Logistic Regression (with undersampling), Li
 Moreover, the LightGBM model attained the highest scores in both precision and recall metrics.
 
 ### 3.how we can further improve the model?:
-From this point on, we will focus on improving the performance of the LightGBM model. To achieve this, we will use Wrapper Methods for feature selection, which help identify the most relevant features. Specifically, we will apply Recursive Feature Elimination to enhance the model’s effectiveness.
+From this point on, we will focus on improving the performance of the LightGBM model. To achieve this, we will use Wrapper Methods for feature selection, which help identify the most relevant features. Specifically, we will apply Recursive Feature Elimination (RFE) to enhance the model’s effectiveness.
 
 ![PLot_III](Plots/Curva_ROC_LightGBM_RFE.jpg)
 ![PLot_III](Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg)
 ![Table](Plots/metrics_table_LightGBM_RFE.jpg)
 
+How we can see in the figure, we have achieved to improve the metrics such as ROC (from to ), precision and recall (from to ).
 
 
 
