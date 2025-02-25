@@ -92,8 +92,9 @@ Moreover, the LightGBM model attained the highest scores in both precision and r
 ### 3.how we can further improve the model?:
 From this point forward, we will focus on the  LightGBM model and  attempt to improve its performance.
 
-
-
+![PLot_III](Plots/Curva_ROC_LightGBM_RFE.jpg)
+![PLot_III](Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg)
+![PLot_III](Plots/metrics_table_LightGBM_RFE.jpg)
 
 
 
