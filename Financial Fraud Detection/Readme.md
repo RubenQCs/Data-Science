@@ -94,7 +94,7 @@ From this point forward, we will focus on the  LightGBM model and  attempt to im
 
 ![PLot_III](Plots/Curva_ROC_LightGBM_RFE.jpg)
 ![PLot_III](Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg)
-![PLot_III](Plots/metrics_table_LightGBM_RFE.jpg)
+![Table](Plots/metrics_table_LightGBM_RFE.jpg)
 
 
 
