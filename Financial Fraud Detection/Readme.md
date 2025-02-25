@@ -96,7 +96,7 @@ From this point on, we will focus on improving the performance of the LightGBM m
 ![PLot_III](Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg)
 ![Table](Plots/metrics_table_LightGBM_RFE.jpg)
 
-How we can see in the figure, we have achieved to improve the metrics such as ROC (from  to 0.0048 ), precision (from to ) and recall (from to 0.7353 ).
+How we can see in the figure, we have achieved to improve the metrics such as AUC (from  to 0.7592 ), precision (from to 0.0048 ) and recall (from to 0.7353 ).
 
 
 
