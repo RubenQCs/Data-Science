@@ -117,8 +117,8 @@ The implemented model consists of a dense neural network (DNN) with multiple lay
 
 
 <img src="Plots/CurvaROC_DL.jpg" width="500">
-<img src="Plots/matrizconfusion_DL.jpg" width="700">
-<img src="Plots/metrics_table_DL.jpg" width="500">
+<img src="Plots/matrizconfusion_DL.jpg" width="400">
+<img src="Plots/metrics_table_DL.jpg" width="400">
 
 
 
