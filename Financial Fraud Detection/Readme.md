@@ -6,6 +6,8 @@
 This repository focuses on financial fraud detection using machine learning techniques, with a particular emphasis on the article titled "Financial fraud detection through the application of machine learning techniques: a literature review." The article provides a comprehensive review of the various methodologies used for fraud detection in the financial sector, analyzing approaches ranging from traditional methods to more advanced techniques.
 
 ## Dataset
+Finding an available dataset for financial fraud detection can be quite challenging due to the sensitive nature of the data involved. Most financial institutions and organizations keep such datasets private to protect user information and prevent misuse. As a result, access to real-world datasets is often difficult.
+Here, we will use a dataset obtained of this article "Yang Bao, Bin Ke, Bin Li, Julia Yu, and Jie Zhang (2020). Detecting Accounting Fraud in Publicly Traded U.S. Firms Using a Machine Learning Approach. Journal of Accounting Research, 58 (1): 199-235."
 
 You can download the dataset from here:  
 [📥 Download Dataset](https://docs.google.com/spreadsheets/d/1ANOYFKEC7GJtriPFpXc3PNvHanHP3oXJ/edit?usp=share_link&ouid=111569509993326914459&rtpof=true&sd=true)
