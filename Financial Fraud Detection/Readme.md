@@ -71,21 +71,20 @@ The plots show the number of fraud and non-fraud cases on a logarithmic scale as
 ### 2.Model:
 Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014. We will assess the performance of the Logistic Regression models by employing techniques such as oversampling, undersampling, and addressing class imbalance.
 
-![PLot_I](Plots/Regression_logistic_comparison_.jpg)
-![PLot_II](Plots/confusion_matrices_comparison.jpg)
-![PLot_III](Plots/precision_recall_comparison_logistic_regression.jpg)
-
+<img src="Plots/Regression_logistic_comparison_.jpg" width="500">
+<img src="Plots/confusion_matrices_comparison.jpg" width="500">
+<img src="Plots/precision_recall_comparison_logistic_regression.jpg" width="500">
 
 The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling. In the confusion matrices, we can see that when we balance the data, the model starts to learn about the fraud cases. Other metrics that we want to considerer are the precision and recall. Precision metric indicates, of all the cases that the model predicted as positive, how many were actually positive **(useful when false positives are costly)**. Recall metric, on the other hand, indicates, of all the actual positive cases, how many were correctly identified by the model **(useful when false negatives are costly)**.
 
 There are numerous machine learning models that can be employed for fraud detection, each with distinct advantages depending on the dataset and specific requirements of the task. Among the many options available, LightGBM and RUSBoost stand out as particularly effective approaches. 
 
-![PLot_III](Plots/Comparison_ROC_LGBM_.jpg)
+<img src="Plots/Comparison_ROC_LGBM_.jpg" width="500">
 
 The figure shows the performance of Logistic Regression (with undersampling), LightGBM, and RUSBoost in fraud detection. The results indicate that LightGBM achieved the highest score in the AUC metric.
 
-![PLot_III](Plots/precision_recall_comparison_2.jpg)
-![PLot_III](Plots/Matrix_ROC_LGBM.jpg)
+<img src="Plots/precision_recall_comparison_2.jpg" width="500">
+<img src="Plots/Matrix_ROC_LGBM.jpg" width="500">
 
 Moreover, the LightGBM model attained the highest scores in both precision and recall metrics.
 
