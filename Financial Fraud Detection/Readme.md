@@ -72,7 +72,7 @@ The plots show the number of fraud and non-fraud cases on a logarithmic scale as
 Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014. We will assess the performance of the Logistic Regression models by employing techniques such as oversampling, undersampling, and addressing class imbalance.
 
 <img src="Plots/Regression_logistic_comparison_.jpg" width="500">
-<img src="Plots/confusion_matrices_comparison.jpg" width="500">
+<img src="Plots/confusion_matrices_comparison.jpg" width="700">
 <img src="Plots/precision_recall_comparison_logistic_regression.jpg" width="500">
 
 The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling. In the confusion matrices, we can see that when we balance the data, the model starts to learn about the fraud cases. Other metrics that we want to considerer are the precision and recall. Precision metric indicates, of all the cases that the model predicted as positive, how many were actually positive **(useful when false positives are costly)**. Recall metric, on the other hand, indicates, of all the actual positive cases, how many were correctly identified by the model **(useful when false negatives are costly)**.
@@ -92,7 +92,7 @@ Moreover, the LightGBM model attained the highest scores in both precision and r
 From this point on, we will focus on improving the performance of the LightGBM model. To achieve this, we will use Wrapper Methods for feature selection, which help identify the most relevant features. Specifically, we will apply Recursive Feature Elimination (RFE) to enhance the model’s effectiveness.
 
 <img src="Plots/Curva_ROC_LightGBM_RFE.jpg" width="500">
-<img src="Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg" width="500">
+<img src="Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg" width="700">
 <img src="Plots/metrics_table_LightGBM_RFE.jpg" width="500">
 
 As we can see in the figure, we have successfully improved metrics such as AUC (from 0.6915 to 0.7592), precision (from 0.0036 to 0.0048), and recall (from 0.5294 to 0.7353). These are good results, but the key questions are: can we improve the model further? What do we really want to optimize?
