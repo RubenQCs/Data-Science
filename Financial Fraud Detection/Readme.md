@@ -62,18 +62,18 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 
 ### 1.Exploratory data analysis:
 
-![Histogram](Plots/Fraudes.jpg)
-![Table_I](Plots/Table.jpg)
-![Histogram](Plots/fraud_vs_nonfraud.jpg)
+<img src="Plots/Fraudes.jpg" width="500">
+<img src="Plots/Table.jpg" width="500">
+<img src="Plots/fraud_vs_nonfraud.jpg" width="500">
 
 The plots show the number of fraud and non-fraud cases on a logarithmic scale as a function of years. Here, we can note that there is a significant imbalance between fraud and non-fraud cases. What can we do about it? There are several solutions to this problem, such as undersampling and oversampling. In this work, we will use undersampling, which reduces the size of the majority class (non-fraud data).
 
 ### 2.Model:
 Implementation of logistic regression for fraud detection. First, we will train a Logistic Regression model with data from 1990-2011 and evaluate it with data from 2011-2014. We will assess the performance of the Logistic Regression models by employing techniques such as oversampling, undersampling, and addressing class imbalance.
 
-<img src="Plots/Regression_logistic_comparison_.jpg" width="300">
-<img src="Plots/confusion_matrices_comparison.jpg" width="300">
-<img src="Plots/precision_recall_comparison_logistic_regression.jpg" width="300">
+<img src="Plots/Regression_logistic_comparison_.jpg" width="500">
+<img src="Plots/confusion_matrices_comparison.jpg" width="500">
+<img src="Plots/precision_recall_comparison_logistic_regression.jpg" width="500">
 
 The AUC obtained in all models is not good, as it is close to 0.5 (equivalent to a random model). One question that arises is whether AUC is the correct metric for this case. We cannot rely solely on the AUC metric; instead, we should select the appropriate evaluation metric based on the specific problem we are modeling. In the confusion matrices, we can see that when we balance the data, the model starts to learn about the fraud cases. Other metrics that we want to considerer are the precision and recall. Precision metric indicates, of all the cases that the model predicted as positive, how many were actually positive **(useful when false positives are costly)**. Recall metric, on the other hand, indicates, of all the actual positive cases, how many were correctly identified by the model **(useful when false negatives are costly)**.
 
