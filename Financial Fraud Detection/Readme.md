@@ -104,6 +104,9 @@ On the other hand, let us imagine that we were working in a consulting firm and 
 Therefore, another important aspect to consider for improving our model is reducing false positives—cases that are mistakenly classified as fraud. Lowering the number of false positives would not only improve the model’s precision but also reduce the workload required for case review. **How can we do this? This is the next task, and maybe using deep learning we can achieve it.**
 
 
+### 3.Deep Learning:
+
+
 
 
 
