@@ -94,7 +94,7 @@ From this point on, we will focus on improving the performance of the LightGBM m
 
 ![PLot_III](Plots/Curva_ROC_LightGBM_RFE.jpg)
 ![PLot_III](Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg)
-![Table](Plots/metrics_table_LightGBM_RFE.jpg)
+![Table](Plots/metrics_table_LightGBM_RFE.jpg) { width=100 }
 
 As we can see in the figure, we have successfully improved metrics such as AUC (from 0.6915 to 0.7592), precision (from 0.0036 to 0.0048), and recall (from 0.5294 to 0.7353). These are good results, but the key questions are: can we improve the model further? What do we really want to optimize?
 
