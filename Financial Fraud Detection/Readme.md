@@ -62,9 +62,9 @@ This dataset contains financial data from companies traded on the NYSE, NASDAQ, 
 
 ### 1.Exploratory data analysis:
 
-<img src="Plots/Fraudes.jpg" width="500">
-<img src="Plots/Table.jpg" width="500">
-<img src="Plots/fraud_vs_nonfraud.jpg" width="500">
+<img src="Plots/Fraudes.jpg" width="600">
+<img src="Plots/Table.jpg" width="600">
+<img src="Plots/fraud_vs_nonfraud.jpg" width="600">
 
 The plots show the number of fraud and non-fraud cases on a logarithmic scale as a function of years. Here, we can note that there is a significant imbalance between fraud and non-fraud cases. What can we do about it? There are several solutions to this problem, such as undersampling and oversampling. In this work, we will use undersampling, which reduces the size of the majority class (non-fraud data).
 
