@@ -96,7 +96,9 @@ From this point on, we will focus on improving the performance of the LightGBM m
 ![PLot_III](Plots/Confusion_Matrix_ROC_LightGBM_RFE.jpg)
 ![Table](Plots/metrics_table_LightGBM_RFE.jpg)
 
-How we can see in the figure, we have achieved to improve the metrics such as AUC (from 0.6915  to 0.7592), precision (from 0.0036 to 0.0048) and recall (from 0.5294 to 0.7353). These are good results, but the questions are: can we improve the model further? What do we really want to improve?. In the tax fraud detection problem, we want to minimaze the negative fake (fraud case that our model dont detect it). Therefore, we need improve our model focused in the recall metric. For example, our results show that 
+As we can see in the figure, we have successfully improved metrics such as AUC (from 0.6915 to 0.7592), precision (from 0.0036 to 0.0048), and recall (from 0.5294 to 0.7353). These are good results, but the key questions are: can we improve the model further? What do we really want to optimize?
+
+In the tax fraud detection problem, our main goal is to minimize false negatives (fraud cases that our model fails to detect). Therefore, we need to focus on improving the **recall metric**.
 
 
 
