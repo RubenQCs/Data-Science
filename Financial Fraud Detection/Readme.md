@@ -100,6 +100,9 @@ As we can see in the figure, we have successfully improved metrics such as AUC (
 
 In the tax fraud detection problem, our main goal is to minimize false negatives (fraud cases that our model fails to detect). Therefore, we need to focus on improving the **recall metric**.
 
+On the other hand, let us imagine that we were working in a consulting firm and our goal was to identify fraudulent cases, we would need to review with certainty the **25 + 5,157** cases flagged as fraudulent by the model.
+
+Therefore, another important aspect to consider for improving our model is reducing false positives—cases that are mistakenly classified as fraud. Lowering the number of false positives would not only improve the model’s precision but also reduce the workload required for case review. **How can we do this? This is the next task, and maybe using deep learning we can achieve it.**
 
 
 
