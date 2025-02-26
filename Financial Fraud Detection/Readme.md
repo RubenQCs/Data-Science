@@ -107,7 +107,14 @@ Therefore, another important aspect to consider for improving our model is reduc
 
 
 ### 4. Deep Learning:
-The implemented model consists of a dense neural network with multiple layers, designed to capture complex relationships among financial variables. The ReLU activation function is used in the hidden layers to enhance learning capacity, while the sigmoid function is applied in the output layer to obtain a fraud probability. Optimization is performed using the Adam algorithm, and the loss function employed is binary crossentropy, given the binary nature of the problem.
+The implemented model consists of a dense neural network (DNN) with multiple layers, designed to capture complex relationships among financial variables. The ReLU activation function is used in the hidden layers to enhance learning capacity, while the sigmoid function is applied in the output layer to obtain a fraud probability. Optimization is performed using the Adam algorithm, and the loss function employed is binary crossentropy, given the binary nature of the problem. The DNN model is composed of: 
+
+-  first hidden layer with 128 neurons and ReLU activation.
+- second hidden layer with 64 neurons and ReLU activation.
+-  third hidden layer with 32 neurons and ReLU activation.
+- fourth hidden layer with 16 neurons and ReLU activation.
+-  output layer with 1 neuron and sigmoid activation to generate a fraud probability.
+
 
 <img src="Plots/CurvaROC_DL.jpg" width="500">
 <img src="Plots/matrizconfusion_DL.jpg" width="700">
