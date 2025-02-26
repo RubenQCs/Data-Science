@@ -122,7 +122,7 @@ The implemented model consists of a dense neural network (DNN) with multiple lay
 
 
 ### 5. K-Nearest Neighbors model:
-Here, we will focus on a K-Nearest Neighbors (KNN) approach for financial fraud detection. Unlike Deep Learning models, KNN is an instance-based algorithm that classifies new observations based on their similarity to the nearest neighbors. We will implement this model after applying feature selection and data balancing techniques.
+Here, we will focus on a K-Nearest Neighbors (KNN) approach for financial fraud detection. Unlike Deep Learning models, KNN is an instance-based algorithm that classifies new observations based on their similarity to the nearest neighbors. We will implement this model after applying feature selection and data balancing techniques. Furthermore, the optimal value of **K** for the KNN model is determined through a parameter search using GridSearchCV, optimizing recall to maximize fraud detection.
 
 <img src="Plots/CurvaROC_KNN.jpg" width="500">
 <img src="Plots/matrizconfusion_KNN.jpg" width="500">
