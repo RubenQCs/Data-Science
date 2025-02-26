@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This repository focuses on developing and implementing machine learning models to detect financial fraud efficiently. 
+This repository focuses on financial fraud detection using machine learning techniques, with a particular emphasis on the article titled "Financial fraud detection through the application of machine learning techniques: a literature review." The article provides a comprehensive review of the various methodologies used for fraud detection in the financial sector, analyzing approaches ranging from traditional methods to more advanced techniques.
 
 ## Dataset
 
