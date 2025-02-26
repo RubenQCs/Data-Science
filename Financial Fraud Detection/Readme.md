@@ -106,7 +106,7 @@ On the other hand, let us imagine that we were working in a consulting firm and 
 Therefore, another important aspect to consider for improving our model is reducing false positives—cases that are mistakenly classified as fraud. Lowering the number of false positives would not only improve the model’s precision but also reduce the workload required for case review. **How can we do this? This is the next task, and maybe using deep learning we can achieve it.**
 
 
-### 4. Deep Learning:
+### 4. Deep Neural Network model:
 The implemented model consists of a dense neural network (DNN) with multiple layers, designed to capture complex relationships among financial variables. The ReLU activation function is used in the hidden layers to enhance learning capacity, while the sigmoid function is applied in the output layer to obtain a fraud probability. Optimization is performed using the Adam algorithm, and the loss function employed is binary crossentropy, given the binary nature of the problem. The DNN model is composed of: 
 
 -  first hidden layer with 128 neurons and ReLU activation.
@@ -121,6 +121,8 @@ The implemented model consists of a dense neural network (DNN) with multiple lay
 <img src="Plots/metrics_table_DL.jpg" width="400">
 
 
+### 5. K-Nearest Neighbors model:
+Here, we will focus on a K-Nearest Neighbors (KNN) approach for financial fraud detection. Unlike Deep Learning models, KNN is an instance-based algorithm that classifies new observations based on their similarity to the nearest neighbors. We will implement this model after applying feature selection and data balancing techniques.
 
 
 
