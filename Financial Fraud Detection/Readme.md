@@ -129,7 +129,7 @@ Here, we will focus on a K-Nearest Neighbors (KNN) approach for financial fraud 
 <img src="Plots/metrics_table_KNN.jpg" width="400">
 
 
-
+### 5. Quantum machine learning:
 
 
 
