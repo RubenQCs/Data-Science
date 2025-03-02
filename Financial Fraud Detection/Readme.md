@@ -130,7 +130,7 @@ Here, we will focus on a K-Nearest Neighbors (KNN) approach for financial fraud 
 
 
 ### 5. Quantum machine learning:
-
+Quantum Machine Learning (QML) is an emerging field that explores the intersection between quantum computing and machine learning. Its goal is to leverage the properties of quantum systems, such as superposition, entanglement, and interference, to enhance the efficiency and performance of machine learning algorithms. Here, we will employ a quantum neural network for financial fraud detection.
 
 
 
