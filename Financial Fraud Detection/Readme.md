@@ -144,9 +144,8 @@ Quantum Machine Learning (QML) is an emerging field that explores the intersecti
 
 # Steps to Follow:
 
-1. **Data Preprocessing** (already included in your code).
+1. **Data Preprocessing** 
 2. **Build the Quantum Neural Network (QNN)** using Qiskit and OpflowQNN.
 3. **Train the Quantum Model** with a quantum optimizer.
 4. **Evaluate and Visualize the Model**.
-
 
