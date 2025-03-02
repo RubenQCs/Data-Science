@@ -5,12 +5,12 @@
 
 This repository focuses on financial fraud detection using machine learning techniques, with a particular emphasis on the article titled "Financial fraud detection through the application of machine learning techniques: a literature review." The article provides a comprehensive review of the various methodologies used for fraud detection in the financial sector, analyzing approaches ranging from traditional methods to more advanced techniques. Here, we will explore different models for financial fraud detection. 
 
-## Logistic Regression
-## LightGBM
-## RUSBoost
-## Deep Neural Network (DNN)
-## K-Nearest Neighbors (KNN)
-## Quantum Machine Learning (QML)
+- Logistic Regression
+- LightGBM
+- RUSBoost
+- Deep Neural Network (DNN)
+- K-Nearest Neighbors (KNN)
+- Quantum Machine Learning (QML)
 
 
 ## Dataset
